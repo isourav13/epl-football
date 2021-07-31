@@ -47,7 +47,7 @@ export const renderTeamView = (el) => {
             <div class="next-match" data-id="">
 
             </div>
-            
+
             <div class="matches-area">
                 <div class="choose-matches">
                     <div class="select-desktop">
@@ -279,7 +279,7 @@ export const renderFixtures = (el) => {
         <div class="match__date">
              <div> ${finalHour}</div>
              <div>${finalDay} </div>
-            </div> 
+            </div>
             <div class="match">
                 <div class="match__team">
                     <div class="match__team-logo">
@@ -329,6 +329,7 @@ export const loadTwitter = (teamID) => {
     [63, 'FulhamFC?ref_src=twsrc%5Etfw'],
     [74, 'WBA?ref_src=twsrc%5Etfw'],
     [341, 'lufc?ref_src=twsrc%5Etfw'],
+    [402, 'BrentfordFC?ref_src=twsrc%5E'],
   ]);
   const markup = `<a class="twitter-timeline" data-dnt="true" data-theme="light" href="https://twitter.com/${twitterLinks.get(teamID)}"></a>`;
   document.querySelector('.twitter-feed').insertAdjacentHTML('beforeend', markup);
