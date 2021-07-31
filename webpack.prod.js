@@ -22,6 +22,11 @@ module.exports = merge(common, {
         }
       ],
     }),
+
+    new HtmlWebpackPlugin({
+    favicon: "./src/favicon.ico"
+  }),
+
     new HtmlWebpackPlugin({
       template: './src/index.html',
       minify: {
