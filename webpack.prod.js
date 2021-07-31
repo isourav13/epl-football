@@ -23,9 +23,12 @@ module.exports = merge(common, {
       ],
     }),
 
-    new HtmlWebpackPlugin({
-    favicon: "./src/favicon.ico"
-  }),
+    new CopyWebpackPlugin({
+    patterns: [
+     // relative path is from src
+     { from: './src/favicon.ico' }, // <- your path to favicon
+    ]
+ }),
 
     new HtmlWebpackPlugin({
       template: './src/index.html',
