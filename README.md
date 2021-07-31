@@ -18,8 +18,10 @@ https://isourav13.github.io/epl-football/
 
 ## Built With
 
+
 * [Swiper](https://swiperjs.com/)
 * [Football-Data API](https://www.football-data.org/documentation/quickstart)
+* [React Native](https://reactnative.dev/docs/getting-started)
 
 
 
