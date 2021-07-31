@@ -4,10 +4,7 @@ export default class LeagueData {
   constructor(query) {
     this.query = query;
   }
-  //async getLeagueData() {
-    //await fetch(`https://api.football-data.org/v2/competitions/${this.query}/teams`, {
-      //headers: { 'X-Auth-Token': '7f177860aa5f4fa08d604940d69212f5' },
-    //})
+
 
     async getLeagueData() {
       await fetch(`https://api.football-data.org/v2/competitions/${this.query}/teams`, {
@@ -26,10 +23,7 @@ export default class LeagueData {
       .catch(ifErrorHappened)
       .finally((this.teams = null), (this.season = null), (this.competition = null));
   }
-  //async getMatchesData() {
-    //await fetch(`https://api.football-data.org/v2/competitions/${this.query}/matches`, {
-      //headers: { 'X-Auth-Token': '7f177860aa5f4fa08d604940d69212f5' },
-    //})
+
 
     async getMatchesData() {
       await fetch(`https://api.football-data.org/v2/competitions/${this.query}/matches`, {
@@ -50,10 +44,7 @@ export default class LeagueData {
       .catch(ifErrorHappened)
       .finally(((this.allMatches = [-1]), (this.favTeamMatches = [undefined])));
   }
-  //async getLeagueStandings() {
-    //await fetch(`https://api.football-data.org/v2/competitions/${this.query}/standings`, {
-      //headers: { 'X-Auth-Token': '7f177860aa5f4fa08d604940d69212f5' },
-    //})
+
     async getLeagueStandings() {
       await fetch(`https://api.football-data.org/v2/competitions/${this.query}/standings`, {
         headers: { 'X-Auth-Token': '09b02882ad2044e2b59a477ef75bb5e9' },
@@ -66,10 +57,7 @@ export default class LeagueData {
       .catch(ifErrorHappened)
       .finally((this.table = [-1]));
   }
-//  async getTopScorers() {
-  //  await fetch(`https://api.football-data.org/v2/competitions/${this.query}/scorers`, {
-    //  headers: { 'X-Auth-Token': '7f177860aa5f4fa08d604940d69212f5' },
-    //})
+
     async getTopScorers() {
       await fetch(`https://api.football-data.org/v2/competitions/${this.query}/scorers`, {
         headers: { 'X-Auth-Token': '09b02882ad2044e2b59a477ef75bb5e9' },
